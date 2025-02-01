@@ -29,6 +29,7 @@
                 {% else %}
                     ${{ product.harga }}
                     <br/> 
+                    <a href="{% url 'order' product.id %}" class="btn btn-secondary">Pesan sekarang</a>
                 {% endif %}
 
                 </br></br>

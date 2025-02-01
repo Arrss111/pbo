@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'aryaapp.apps.AryaappConfig',
-    'cart' 
+    'cart',
+    'pemesanan',
 ]
 
 MIDDLEWARE = [
