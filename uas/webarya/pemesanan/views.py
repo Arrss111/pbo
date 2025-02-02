@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from aryaapp.models import karyaSeni
 from django.contrib import messages
 from .forms import orderform
-from pemesanan.models import order
+from pemesanan.models import orderItem
 
 def isi(request):
     form = orderform()

@@ -13,6 +13,6 @@ class orderform(forms.ModelForm):
 
     class Meta:
         model = order
-        fields = ['full_name', 'email', 'deskripsi', 'Nomor_HP']
+        fields = ['full_name', 'email', 'deskripsi', 'Nomor_HP', "product"]
 
         exclude = ['user', ]

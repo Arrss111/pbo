@@ -29,13 +29,13 @@ class pemesanan(models.Model):
 
 
 class orderItem(models.Model):
-    order = models.ForeignKey(order, on_delete=models.CASCADE, null=True)
-    product = models.ForeignKey(karyaSeni, on_delete=models.CASCADE, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     pesan = models.ForeignKey(pemesanan,default=1, on_delete=models.CASCADE, null=True)
-    
     quantity = models.PositiveBigIntegerField(default=1)
     harga = models.DecimalField(default=0, max_digits=6, decimal_places=2)
+    full_name = models.CharField(max_length=100, null=True, blank=True)  # Tambahkan field full_name
+    product = models.ForeignKey(karyaSeni, on_delete=models.CASCADE, null=True)  # Tambahkan field product
+    email = models.EmailField(max_length=100, null=True, blank=True)  # Tambahkan field email
+    deskripsi = models.TextField(max_length=1000, null=True, blank=True)  # Tambahkan field deskripsi
 
     def __str__(self):
         return f'orderItem - {str(self.id)}'
