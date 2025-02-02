@@ -27,7 +27,10 @@
                               Info order
                             </div>
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Menunggu Konfirmasi</li>
+                              <li class="list-group-item">{{ order_item.pesan }}</li>
+                              <li class="list-group-item">Nama Lengkap: {{ order_item.full_name }}</li>
+                              <li class="list-group-item">Email: {{ order_item.email }}</li>
+                              <li class="list-group-item">Produk: {{ order_item.product }}</li>
                             </ul>
                           </div>
                         <br/><br/>

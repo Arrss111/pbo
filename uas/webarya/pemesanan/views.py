@@ -18,4 +18,5 @@ def isi(request):
         return render(request, 'isi.html', {'form': form})
 
 def terimakasih(request):
-    return render(request, 'terimakasih.html', {}) 
+    order_item = orderItem.objects.latest('id')
+    return render(request, 'terimakasih.html', {'order_item': order_item}) 
