@@ -4,10 +4,6 @@ from django.contrib import messages
 from .forms import orderform
 from pemesanan.models import order
 
-def order(request,pk):
-    product = karyaSeni.objects.get(id=pk)
-    return render(request, 'order.html', {'product': product})
-
 def isi(request):
     form = orderform()
     if request.method == 'POST':

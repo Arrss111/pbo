@@ -11,21 +11,6 @@ class Category(models.Model):
     
     class Meta:
         verbose_name_plural = 'categories'
-
-
-# Customers
-class Customer(models.Model):
-    Nama_depan = models.CharField(max_length=50)
-    Nama_belakang = models.CharField(max_length=50)
-    phone = models.CharField(max_length=15)
-    email = models.EmailField(max_length=100)
-    pasword = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f'{self.Nama_depan} {self.Nama_belakang}'
-    
-
-
     
 # Product
 class karyaSeni(models.Model):
@@ -43,15 +28,3 @@ class karyaSeni(models.Model):
         return (f"ID: {self.id}: Dari {self.Judul_Karya} Dibuat oleh {self.Nama_pembuat} Deskripsi : {self.deskripsi}, dijual dengan harga Rp.{self.harga}")
     
 
-# Customer order
-class Order(models.Model):
-    product = models.ForeignKey(karyaSeni, on_delete=models.CASCADE)
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    quantity = models.IntegerField(default=1)
-    Deskripsi = models.CharField(max_length=50, default='', blank=True)
-    harga = models.DecimalField(default=0, max_digits=6, decimal_places=2)
-    phone = models.CharField(max_length=20, default='', blank=True)
-    status = models.BooleanField(default=False)
-
-    def __str__(self):
-        return self.product

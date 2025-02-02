@@ -26,3 +26,9 @@ class orderItem(models.Model):
     def __str__(self):
         return f'orderItem - {str(self.id)}'
     
+class pemesanan(models.Model):
+    proses = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.proses
+    
