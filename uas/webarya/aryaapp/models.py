@@ -25,6 +25,6 @@ class karyaSeni(models.Model):
     sale_price = models.DecimalField(default=0, max_digits=6, decimal_places=2)
 
     def __str__(self):
-        return (f"ID: {self.id}: Dari {self.Judul_Karya} Dibuat oleh {self.Nama_pembuat} Deskripsi : {self.deskripsi}, dijual dengan harga Rp.{self.harga}")
+        return (f"ID: {self.id}: Dari {self.Judul_Karya} Dibuat oleh {self.Nama_pembuat} Deskripsi : {self.deskripsi}")
     
 
