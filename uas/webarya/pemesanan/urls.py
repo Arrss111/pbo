@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
     path('isi/', views.isi, name="isi"),
     path('terimakasih/', views.terimakasih, name="terimakasih"),
+    path('list/', views.List, name="list"),
 
 ]

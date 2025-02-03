@@ -20,3 +20,7 @@ def isi(request):
 def terimakasih(request):
     order_item = orderItem.objects.latest('id')
     return render(request, 'terimakasih.html', {'order_item': order_item}) 
+
+def List(request):
+    List = orderItem.objects.all()
+    return render(request, 'List.html', {'List': List})

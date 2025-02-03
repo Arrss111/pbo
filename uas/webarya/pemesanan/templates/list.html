@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Selamat datang</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Silahkan lihat-lihat</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+
+
+                    {% for List in List %}
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder"> Status : {{ List.pesan }} </h5>
+                                    <!-- Product price-->
+                                    Nama :{{List.full_name}}
+                                    <br/>
+                                    Karya yang ingin dibeli :{{List.product}}
+                                    <br/>
+                                    Detail deskripsi pemesanan :{{List.deskripsi}}
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </section>
+
+{% endblock  %}
